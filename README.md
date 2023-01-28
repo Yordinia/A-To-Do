@@ -152,7 +152,7 @@ Example command:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Athaliah Tauro**
+👤 **Yordanos**
 
 - GitHub: [@Yordinia](https://github.com/Yordinia)
 - Twitter: [@Yordinia](https://twitter.com/Yordinia)
