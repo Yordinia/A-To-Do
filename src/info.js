@@ -84,7 +84,7 @@ class Page {
   }
 
   saveData() {
-    for (let i; i < this.list.length; i += 1) {
+    for (let i=1; i <= this.list.length; i += 1) {
       this.list[i].index = i;
     }
     this.list.sort((a, b) => {
