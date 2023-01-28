@@ -1,92 +1,56 @@
-body {
-  margin: 10px auto;
-  min-width: 250px;
-  max-width: 50%;
-  background-color: rgb(219, 212, 212);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap');
+
+:root {
+  --font-weight: 300;
+  --font: 'Poppins', sans-serif;
 }
 
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-ul li {
-  cursor: pointer;
-  position: relative;
-  padding: 12px 8px 12px 40px;
-  list-style-type: none;
-  background: #eee;
-  font-size: 18px;
-  transition: 0.2s;
-
-  /* make the list items unselectable */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Set zebra-stripes: all odd list items to a different color */
-ul li:nth-child(odd) {
-  background: #f9f9f9;
-}
-
-ul li:hover {
-  background: #ddd;
-}
-
-ul li.checked {
-  background: rgb(85, 255, 51);
-  color: white;
-  text-decoration: line-through;
-}
-
-ul li.checked::before {
-  content: '';
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-}
-
-/* Style the close button */
-.close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px;
-}
-
-.close:hover {
-  background-color: crimson;
-  color: white;
-}
-
-.header {
+body {
   background-color: #fff;
-  flex-direction: row;
-  justify-content: space-between;
+}
+
+main {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #333;
-  letter-spacing: 1.5px;
+  padding-top: 50px;
+  margin: 0 auto;
 }
 
-.header::after {
-  content: "";
-  display: table;
-  clear: both;
+header {
+  display: flex;
+  gap: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-h1 {
+.list-section {
+  display: flex;
+  box-shadow: 0 3px 5px 1px grey;
+  width: 500px;
+  max-width: 100%;
+  flex-direction: column;
+  background: #fff;
+}
+
+.delete-work {
+  transition: 0.6s;
+  color: #9797a5;
+  cursor: pointer;
+  padding-right: 10px;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo h2 {
   margin: 0;
   align-items: center;
   color: #545862;
@@ -100,30 +64,107 @@ h1 {
   white-space: nowrap;
 }
 
-input {
-  margin: 0;
+.todo .new-item {
+  margin-right: 20px;
+  text-align: center;
+  margin-top: 20px;
+  transition: 0.6s;
+  color: #9797a5;
+  cursor: pointer;
+}
+
+.material-icons {
+  font-size: 23px;
+}
+
+.data-input {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+#form-sector {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+#enter {
+  width: 100%;
+  padding: 0 40px 0 1rem;
+  line-height: 50px;
+  height: 50px;
   border: none;
-  border-radius: 0;
-  width: 75%;
-  padding: 10px;
-  float: left;
-  font-size: 16px;
   font-style: italic;
 }
 
-.addBtn {
-  padding: 10px;
-  width: 25%;
-  color: #555;
-  float: left;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-  border-radius: 0;
+p {
+  width: calc(100% - 50px);
+  border: 0 solid transparent;
+  color: #9797a5;
+  outline: none;
+  background: transparent;
+  height: 22px;
+  line-height: 22px;
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+  font-weight: 300;
+  font-size: 15px;
 }
 
-#clear-list {
+.update-status {
+  color: #9797a5;
+  font-size: 23px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.return {
+  transition: 0.6s;
+  color: #9797a5;
+  background-color: #fff;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-items {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 10px 10px 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.done {
+  color: rgb(45, 223, 22);
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #9797a5;
+  font-size: large;
+}
+
+.more-bars {
+  padding-right: 7px;
+  color: #9797a5;
+  font-size: 18px;
+  cursor: move;
+}
+
+.clear-all {
   display: flex;
   width: 100%;
   text-align: center;
@@ -133,8 +174,9 @@ input {
   background-color: #e8e8e8;
 }
 
-#clear-list:hover {
-  color: white;
+.clear-all:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 #author {

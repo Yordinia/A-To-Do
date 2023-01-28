@@ -24,6 +24,10 @@ module.exports = {
         test: /\.(?:ico│gif│pngVjpeg)$/i,
         type: 'asset/resource',
       },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },
 };
