@@ -3,7 +3,112 @@ body {
   min-width: 250px;
   max-width: 50%;
   background-color: rgb(219, 212, 212);
-italic;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set zebra-stripes: all odd list items to a different color */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+ul li:hover {
+  background: #ddd;
+}
+
+ul li.checked {
+  background: rgb(85, 255, 51);
+  color: white;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: crimson;
+  color: white;
+}
+
+.header {
+  background-color: #fff;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  letter-spacing: 1.5px;
+}
+
+.header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h1 {
+  margin: 0;
+  align-items: center;
+  color: #545862;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 1rem;
+  line-height: 20px;
+  width: calc(100% - 2rem);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+  font-style: italic;
 }
 
 .addBtn {
