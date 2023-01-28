@@ -1,0 +1,44 @@
+body {
+  margin: 10px auto;
+  min-width: 250px;
+  max-width: 50%;
+  background-color: rgb(219, 212, 212);
+italic;
+}
+
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+#clear-list {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  padding: 20px 6px;
+  color: #545862;
+  justify-content: center;
+  background-color: #e8e8e8;
+}
+
+#clear-list:hover {
+  color: white;
+}
+
+#author {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  text-align: center;
+}
