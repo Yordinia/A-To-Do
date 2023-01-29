@@ -1,52 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <title> To-do-list</title>
+    <title>To-do-list</title>
     <script
     src="https://kit.fontawesome.com/9d6e6aaa13.js"
     crossorigin="anonymous"
   ></script>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
   </head>
-
   <body>
-    <main>
-      <section class="list-section">
-        <header class="todo">
-          <h2>Today's To Do</h2>
-          <span class="material-icons new-item" id="delete-all">
-            <i class="fa-solid fa-arrows-rotate"></i>
-            
-          </span>
-        </header>
-        <section class="data-input">
-          <div>
-            <form action="#" id="form-sector">
-              <input type="text" name="activity" id="enter" placeholder="Add your list items here...">
-              <button type="submit">
-                <span class="material-icons return">
-                  <i class="fa-solid fa-arrow-turn-down"></i>
-                </span>
-              </button>
-            </form>
-          </div>
-          <div>
-            <ul class="items">
-            </ul>
-          </div>
-        </section>
-        <footer id="footer">
-          <div class="clear-all">
-            Clear all completed
-          </div>
-        </footer>
-      </section>
-    </main>
 
-    <script type="module"  src="./index.js"></script>
+    <div class="header">
+      <h1>To Do List</h1>
+      <hr>
+      <input type="text" id="myInput" placeholder="Add your list here...">
+      <span onclick="newElement()" class="addBtn">
+        <i class="fa-solid fa-arrow-turn-down"></i>
+      </span>
+    </div>
+
+    <ul id="myUL">
+    </ul>
+    <div>
+    <button type="button" id="clear-list" onclick="removeAll()"> Clear all completed</button>
+    </div>
+
+
+    <footer id="author">
+      <p> Author - Yordinia</p>
+    </footer>
+
+
+    <script type="text/javascript" src="./index.js"></script>
+
   </body>
 </html>
